@@ -1,0 +1,44 @@
+dataModels:
+  - entity: poa
+    codeName: POA
+    isPrivate: false
+    stateModel: ПростоеСогласование1
+    classModels: Model1
+
+serviceModels:
+  - service: poaService
+    codeName: POAService
+    classModels: Model1
+
+stateModels:
+  - name: ПростоеСогласование1
+    type: puml
+    contentType: inline
+    data: |
+      @startuml 
+        [*] --> Created
+        Created --> Sent
+        Sent --> Returned
+        Sent --> Confirmed
+        Sent --> Rejected
+        Returned --> Sent
+        Confirmed --> [*]
+        Rejected --> [*]
+      @enduml
+    
+classModels:
+  - name: Model1
+    type: puml
+    contentType: inline
+    data: |
+      @startuml
+      class POA {
+        String DateFrom
+        String DateTo
+        String AuthorityINN
+        
+        Integer Create(POA POA)
+        ConfirmAttorney(String ID)
+      }
+      @enduml
+
