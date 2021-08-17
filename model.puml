@@ -3,7 +3,9 @@
     String DateFrom
     String DateTo
     String AuthorityINN
-
+  }
+  
+  interface AttorneyService {
     Integer Create(POA POA)
     ConfirmAttorney(String ID)
   }
