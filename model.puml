@@ -1,0 +1,10 @@
+@startuml
+  class POA {
+    String DateFrom
+    String DateTo
+    String AuthorityINN
+
+    Integer Create(POA POA)
+    ConfirmAttorney(String ID)
+  }
+@enduml
