@@ -29,16 +29,6 @@ stateModels:
 classModels:
   - name: Model1
     type: puml
-    contentType: inline
-    data: |
-      @startuml
-      class POA {
-        String DateFrom
-        String DateTo
-        String AuthorityINN
-        
-        Integer Create(POA POA)
-        ConfirmAttorney(String ID)
-      }
-      @enduml
+    contentType: file
+    fileName: model.puml
 
